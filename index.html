@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Macroeconomic Simulator</title>
+</head>
+
+<body>
+    <div class="simulator">
+        <div class="safeLine"></div>
+    </div>
+    <div class="control">
+        <div class="form-group">
+            <label for="track">Track</label>
+            <div class="track">
+                <select name="track" id="track">
+                    <option value="wealth">Wealth</option>
+                    <option value="energy">Energy</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="population">Population</label>
+            <div class="group">
+                <input type="range" name="population" id="population" min="0" max="100" value="0" class="slider">
+                <span class="inputValue"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="initialCap">Initial Capital</label>
+            <div class="group">
+                <input type="range" name="initialCap" id="initialCap" min="0" max="100" value="50" class="slider">
+                <span class="inputValue"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="skill">Skill Level</label>
+            <div class="group">
+                <input type="range" name="skill" id="skill" min="1" max="2" value="0" class="slider" step="0.1">
+                <span class="inputValue"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="customers">Customers</label>
+            <div class="group">
+                <input type="range" name="customers" id="customers" min="0" max="20" value="0" class="slider">
+                <span class="inputValue"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="safeZone">Safety Level</label>
+            <div class="group">
+                <input type="range" name="safeZone" id="safeZone" min="0" max="50" value="0" class="slider">
+                <span class="inputValue">100</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="run">Run</button>
+            <button class="reset" onClick="window.location.reload()">Reset</button>
+        </div>
+        <div class="form-group">
+            <label for="total">Total Capital</label>
+            <input type="number" name="total" id="total" value="0" disabled>
+        </div>
+        <div class="form-group">
+            <label for="topShare">Top 10% - Share of Wealth</label>
+            <input type="text" name="topShare" id="topShare" disabled>
+        </div>
+        <div class="form-group">
+            <label for="bottomShare">Bottom 90% - Share of Wealth</label>
+            <input type="text" name="bottomShare" id="bottomShare" disabled>
+        </div>
+        <div class="form-group">
+            <h3>Ticks: <span class="ticks">0</span></h3>
+        </div>
+    </div>
+</body>
+
+</html>
